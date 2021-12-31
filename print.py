@@ -1,11 +1,11 @@
 from transitions import Machine
 from transitions.extensions import GraphMachine
 from flask import Flask, jsonify, request, abort, send_file
-try:
-    import pygraphviz as pgv
-except ImportError:
-    raise
-import requests
+#try:
+import pygraphviz as pgv
+#except ImportError:
+#    raise
+#import requests
 machine = GraphMachine(
     states=["user", "state1", "state2","state3"],
     transitions=[
@@ -33,4 +33,4 @@ machine = GraphMachine(
     auto_transitions=False,
     show_conditions=True,
 )
-machine.get_graph().draw("fsm.png", prog="dot", format="png")
+machine.get_graph().draw("finite_state_machine.png", prog="dot", format="png")
