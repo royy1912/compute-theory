@@ -111,7 +111,7 @@ def webhook_handler():
         response = machine.advance(event)
         if response == False:
             #send_text_message(event.reply_token, "Not Entering any State")
-            send_text_message(event.reply_token, "請輸入想要的拉麵種類")
+            send_text_message(event.reply_token, "請輸入想要的拉麵種類 1.豚骨 2.雞白湯 3.二郎系")
     return "OK"
 
 
