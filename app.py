@@ -30,7 +30,7 @@ g.add_edge(node1,node0,color = "#000000",style = "solid",penwidth = 1,label = "g
 #g.add_edge(node3,node0,color = "#000000",style = "solid",penwidth = 1,label = "go_back")
 
 g.layout()
-g.draw("因果關係圖.png",prog = "neato")
+#g.draw("因果關係圖.png",prog = "neato")
 machine = TocMachine(
     states=["user", "state1", "state2","state3"],
     transitions=[
