@@ -12,25 +12,25 @@ from utils import send_text_message
 
 load_dotenv()
 
-#g = pgv.AGraph(directed = True,strict = False , nodesep = 2 , ranksep = 2 , rankdir = "LR",splines = "splines",concentrate = True)
-#node0 = "user"
-#node1 = "state1"
-#node2 = "state2"
-#node3 = "state3"
-#g.add_node(node0,style = "filled",shape = "circle",color = "#feb64d")
-#g.add_node(node1,style = "filled",shape = "circle",color = "#CFDBF6")
-#g.add_node(node2,style = "filled",shape = "circle",color = "#CFDBF6")
+g = pgv.AGraph(directed = True,strict = False , nodesep = 2 , ranksep = 2 , rankdir = "LR",splines = "splines",concentrate = True)
+node0 = "user"
+node1 = "state1"
+node2 = "state2"
+node3 = "state3"
+g.add_node(node0,style = "filled",shape = "circle",color = "#feb64d")
+g.add_node(node1,style = "filled",shape = "circle",color = "#CFDBF6")
+g.add_node(node2,style = "filled",shape = "circle",color = "#CFDBF6")
 #g.add_node(node3,style = "filled",shape = "circle",color = "#CFDBF6")
-#g.add_edge(node0,node1,color = "#000000",style = "solid",penwidth = 1,label = "advance[is_going_to_state1]")
+g.add_edge(node0,node1,color = "#000000",style = "solid",penwidth = 1,label = "advance[is_going_to_state1]")
 #g.add_edge(node0,node2,color = "#000000",style = "solid",penwidth = 1,label = "advance[is_going_to_state2]")
 #g.add_edge(node0,node3,color = "#000000",style = "solid",penwidth = 1,label = "advance[is_going_to_state3]")
 
-#g.add_edge(node1,node0,color = "#000000",style = "solid",penwidth = 1,label = "go_back")
+g.add_edge(node1,node0,color = "#000000",style = "solid",penwidth = 1,label = "go_back")
 #g.add_edge(node2,node0,color = "#000000",style = "solid",penwidth = 1,label = "go_back")
 #g.add_edge(node3,node0,color = "#000000",style = "solid",penwidth = 1,label = "go_back")
 
-#g.layout()
-#g.draw("因果關係圖.png",prog = "neato")
+g.layout()
+g.draw("因果關係圖.png",prog = "neato")
 machine = TocMachine(
     states=["user", "state1", "state2","state3"],
     transitions=[
