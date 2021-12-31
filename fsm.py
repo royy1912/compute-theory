@@ -6,7 +6,8 @@ from utils import send_text_message
 class TocMachine(GraphMachine):
     def __init__(self, **machine_configs):
         self.machine = GraphMachine(model=self, **machine_configs)
-        send_text_message("Trigger state1")
+        reply_token = self.event.reply_token
+        send_text_message(reply_token,"Trigger state0")
     def is_going_to_state1(self, event):
         text = event.message.text
         return text.lower() == "go to state1"
