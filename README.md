@@ -9,3 +9,4 @@
 ![linebot2](https://github.com/royy1912/compute-theory/blob/master/linebot2.jpg)
 ![linebot3](https://github.com/royy1912/compute-theory/blob/master/linebot3.jpg)
 ##fsm
+![fsm](https://github.com/royy1912/compute-theory/blob/master/finite_state_machine.png)
