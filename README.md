@@ -11,3 +11,5 @@
 
 ## fsm
 ![fsm](https://github.com/royy1912/compute-theory/blob/master/finite_state_machine.png)
+
+## bot information
